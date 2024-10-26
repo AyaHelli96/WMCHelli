@@ -4,57 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über mich</title>
-      <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #860962;
-        }
-        p {
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:#f6cef55b">
-    <h1 style="text-align:center;">Über mich</h1>
+<body>
+
+    <h1 class="title">Über mich</h1>
     <hr>
-    <span>
     <h2>Persönliche Informationen :</h2>
-    <p>&#128120; Name:Aya Helli </p>
-   
-    <p>&#x2649; ALter:28 </p>
-    <small>Ich bin Syrerin und Schülerin der Informatik an der Spengergasse. Mein Interesse gilt besonders dem Programmieren, und ich freue mich darauf, meine Kenntnisse in diesem Bereich weiter zu vertiefen.</small>
+    <p>&#128120; Name: Aya Helli </p>
+    <p>&#x2649; Alter: 28 </p>
+    <small>Ich bin Syrerin und Schülerin der Informatik an der Spengergasse. <br> Mein Interesse gilt besonders dem Programmieren, und ich freue mich darauf,<br> meine Kenntnisse in diesem Bereich weiter zu vertiefen.</small>
     <h2>Hobbys und Interessen:</h2>
-    <p>Meine Hobbys sind Musik hören, spazieren gehen,Filme und Serien schauen ,schwimmen, malen und zeichnen.</p>
-    <h2>Lieblingsfilme</h2>
-<ul>
-    <li>
-        <a href="https://www.imdb.com/title/tt27419292/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_killer" target="_blank">Der Killer</a><br> <img src="Killer.jpg" alt="The killer" width="300" height="200"></li>
-    <li><a href="https://www.imdb.com/title/tt12584954/?ref_=fn_al_tt_3" target="_blank">Twister</a><br> <img src="Twister.jpg" alt="twister" width="300" height="200"></li>
-    <li><a href="https://www.imdb.com/title/tt2987732/?ref_=fn_al_tt_1" target="_blank">Fack Ju Göhte</a><br> <img src="Fak.jpg" alt="fack" width="300" height="200"></li>
-</ul>
-
-<h2>Lieblingsserien</h2>
-<ul>
-    <li><a href="https://www.imdb.com/title/tt5753856/?ref_=fn_al_tt_1" target="_blank">Dark</a><br> <img src="dark.jpg" alt="darkim" width="300" height="200"></li>
-    <li><a href="https://www.imdb.com/title/tt6468322/" target="_blank">LA CASA DE PAPEL</a><br> <img src="LACASA.jpg" alt="LA Casa" width="300" height="200"></li>
-    <li><a href="https://www.netflix.com/ie/Title/70140450 " target="_blank">IT Crowd</a><br> <img src="IT.jpg" alt="ITc" width="300" height="200"></li>
-</ul>
-<hr>
-<h2>Kontaktinformationen:</h2>
-  <ul>
-    <li><a href="https://www.instagram.com/aya_helli_?igsh=MXJmMzEyeHUxbDQzcQ==" target="_blank"> Instagramm </a></li>
-  <li> <a href="https://www.linkedin.com/in/aya-helli-276218289/?originalSubdomain=at" target="_blank">Linkedin</a></li>
-  </ul>
+    <p>Meine Hobbys sind Musik hören, spazieren gehen, Filme und Serien schauen, schwimmen, malen und zeichnen.</p>
+    
+    <div class="favorites">
+        <div class="movies">
+            <h3>Lieblingsfilme</h3>
+            <ul>
+                <li>
+                    <a href="https://www.imdb.com/title/tt27419292/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_killer" target="_blank">Der Killer</a><br>
+                    <img src="Killer.jpg" alt="The killer" width="300" height="200">
+                </li>
+                <li>
+                    <a href="https://www.imdb.com/title/tt12584954/?ref_=fn_al_tt_3" target="_blank">Twister</a><br>
+                    <img src="Twister.jpg" alt="twister" width="300" height="200">
+                </li>
+                <li>
+                    <a href="https://www.imdb.com/title/tt2987732/?ref_=fn_al_tt_1" target="_blank">Fack Ju Göhte</a><br>
+                    <img src="Fak.jpg" alt="fack" width="300" height="200">
+                </li>
+            </ul>
+        </div>
+    
+    <div class="series">
+        <h3>Lieblingsserien</h3>
+        <ul>
+            <li>
+                <a href="https://www.imdb.com/title/tt5753856/?ref_=fn_al_tt_1" target="_blank">Dark</a><br>
+                <img src="dark.jpg" alt="darkim" width="300" height="200">
+            </li>
+            <li>
+                <a href="https://www.imdb.com/title/tt6468322/" target="_blank">LA CASA DE PAPEL</a><br>
+                <img src="LACASA.jpg" alt="LA Casa" width="300" height="200">
+            </li>
+            <li>
+                <a href="https://www.netflix.com/ie/Title/70140450" target="_blank">IT Crowd</a><br>
+                <img src="IT.jpg" alt="ITc" width="300" height="200">
+            </li>
+        </ul>
+    </div>
+</div>
     <h2 style="text-align:center;">Persönliches Zitat</h2>
-    <p style="text-align:center;">"Was du heute denkst, wirst du morgen sein." – Mahatma Gandhi</p>
+    <p class="zit" style="text-align:center;">"Was du heute denkst, wirst du morgen sein." – Mahatma Gandhi</p>
 
-</span>
-
-
-
+    <footer id="f" class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/aya-helli-276218289/?originalSubdomain=at" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/aya_helli_?igsh=MXJmMzEyeHUxbDQzcQ==" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        </ul>
+        <p>&copy;2024 Aya Helli | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
