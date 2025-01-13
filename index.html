@@ -3,84 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über mich</title>
+    <title>Pulse - Cash Flow Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-
-    <h1 class="title">Über mich</h1>
-    <hr>
-    <h2>Persönliche Informationen :</h2>
-    <p>&#128120; Name: Aya Helli </p>
-    <p>&#x2649; Alter: 28 </p>
-    <small>Ich bin Syrerin und Schülerin der Informatik an der Spengergasse. <br> Mein Interesse gilt besonders dem Programmieren, und ich freue mich darauf,<br> meine Kenntnisse in diesem Bereich weiter zu vertiefen.</small>
-    <h2>Hobbys und Interessen:</h2>
-    <p>Meine Hobbys sind Musik hören, spazieren gehen, Filme und Serien schauen, schwimmen, malen und zeichnen.</p>
     
-    <div class="favorites">
-        <div class="movies">
-            <h3>Lieblingsfilme</h3>
-            <ul>
-                <li>
-                    <a href="https://www.imdb.com/title/tt27419292/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_killer" target="_blank">Der Killer</a><br>
-                    <img src="Killer.jpg" alt="The killer" width="300" height="200">
+    <nav class="navbar navbar-light" style="background-color: var(--pulse-color-page-background); padding: 10px;">
+        <div class="container-fluid d-flex justify-content-between align-items-center ">
+            <a class="navbar-brand" href="#">
+                <img src="pulse_logo.png" alt="Pulse Logo" height="80">
+            </a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-success fw-bold " href="#">Features</a>
                 </li>
-                <li>
-                    <a href="https://www.imdb.com/title/tt12584954/?ref_=fn_al_tt_3" target="_blank">Twister</a><br>
-                    <img src="Twister.jpg" alt="twister" width="300" height="200">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-success" href="#">Customer Stories</a>
                 </li>
-                <li>
-                    <a href="https://www.imdb.com/title/tt2987732/?ref_=fn_al_tt_1" target="_blank">Fack Ju Göhte</a><br>
-                    <img src="Fak.jpg" alt="fack" width="300" height="200">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-success" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-success" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-outline-success">Sign Up</a>
                 </li>
             </ul>
         </div>
-    
-    <div class="series">
-        <h3>Lieblingsserien</h3>
-        <ul>
-            <li>
-                <a href="https://www.imdb.com/title/tt5753856/?ref_=fn_al_tt_1" target="_blank">Dark</a><br>
-                <img src="dark.jpg" alt="darkim" width="300" height="200">
-            </li>
-            <li>
-                <a href="https://www.imdb.com/title/tt6468322/" target="_blank">LA CASA DE PAPEL</a><br>
-                <img src="LACASA.jpg" alt="LA Casa" width="300" height="200">
-            </li>
-            <li>
-                <a href="https://www.netflix.com/ie/Title/70140450" target="_blank">IT Crowd</a><br>
-                <img src="IT.jpg" alt="ITc" width="300" height="200">
-            </li>
-        </ul>
-    </div>
-</div>
-    <h2 style="text-align:center;">Persönliches Zitat</h2>
-    <p class="zit" style="text-align:center;">"Was du heute denkst, wirst du morgen sein." – Mahatma Gandhi</p>
+    </nav>
 
-    <footer id="f" class="footer">
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
+    <section class=" text-center d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="fw-bold">Try Pulse free for <br> 30 days.</h1>
+            <small class="text-secondary">See why Pulse is the best way to monitor your cash flow. <br> Sign up for any plan and try Pulse absolutely free for 30 days.</small>
         </div>
-        <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/aya-helli-276218289/?originalSubdomain=at" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/aya_helli_?igsh=MXJmMzEyeHUxbDQzcQ==" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-        </ul>
-        <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-        </ul>
-        <p>&copy;2024 Aya Helli | All Rights Reserved</p>
-    </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+    
 
+    
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 section-hover">
+                <div class="p-4 bg-light rounded">
+                    <h4 class="text-success">Pulse Basics</h4>
+                    <ul>
+                        <li>Manage cash flow on a daily,weekly,monthly,or yearly basis.</li>
+                        <li>Forecast growth with recurring income or expenses that scale automatically</li>
+                        <li>Works with any currency</li>
+                        <li>See Money In and Out,categorize transactions,and run helpful reports</li>
+                        <li>Toggle entries and accounts on and off to game out different scenarios</li>
+                    </ul>
+                    <p>Just need the Pulse Basics? <a href="#" class="text-success">Get them now</a> for $29 per month.</p>
+                </div>
+            </div>
+            <div class="col-md-4 section-hover">
+                <div class="p-4 bg-white rounded border border-success">
+                    <h5 class="text-center text-white bg-success py-2">RECOMMENDED</h5>
+                    <h2 class="text-center fw-bold">Small Business Plan</h2>
+                    <p class="text-center">$59 per month</p>
+                    <a href="#" class="btn btn-success w-100">Sign Up Now</a>
+                    <ul class="mt-3">
+                        <li>Manage across multiple accounts</li>
+                        <li>Invite team members,book keeper ,or management team to see reports or manage cash flow</li>
+                        <li>Integrate with QuickBooks Online for more accurate cash flow</li>
+                        <li>Track your actual cash flow alongside your projected cash flow</li>
+                        <li>Integrate with QuickBooks Online for more accurate cash flow</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 section-hover">
+                <div class="p-4 bg-light rounded">
+                    <h2 class="fw-bold">Unlock Extra Features</h2>
+                    <p>$89 per month</p>
+                    <a href="#" class="btn btn-outline-success w-100">Try Premium</a>
+                    <small>GET IT ALL ,PLUS:</small>
+                    <ul class="mt-3">
+                        <li>Manage cash flow across unlimited financial accounts</li>
+                        <li>Convert to any currency for localized cash flow reporting and projections</li>
+                        <li>Attach invoices or contracts to your casg flow entries for accountability and auditing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center my-5">
+        <img src="Subvert_logo.png" alt="Subvert Logo" height="100" class="mb-3">
+        <p class="fw-bold">“Pulse is worth every penny because it empowers business owners with critical financial insight and knowledge.”</p>
+        <small class="text-success">SUBVERT MARKETING, INC.</small>
+    </section>
+
+    <section class="container my-5 faq-S">
+        <h2 class=" fw-bold custom-margin">FAQ</h2>
+        <div class="row">
+            <div class="col-md-6 faq-item">
+                <h5><strong>How does the 30-day free trial work?</strong></h5>
+                <p>You can use Pulse absolutely free for 30 days. After 30 days, we will charge the credit card you used when you sign up. If you choose to cancel your account before your trial ends, your card will not be charged.</p>
+            </div>
+            <div class="col-md-6 faq-item">
+                <h5><strong>If I upgrade an existing account, do I get another free trial?</strong></h5>
+                <p>Brand new accounts are the only ones eligible for a 30-day free trial. If you upgrade an existing account, your credit card will be billed the new amount on the date of your next billing cycle.</p>
+            </div>
+            <div class="col-md-6 faq-item">
+                <h5><strong>What is a “Financial Account”?</strong></h5>
+                <p>Financial Accounts are a grouping of income and expense items that can be used for tracking or reporting purposes. They’re designed to be flexible and can be used to differentiate between bank accounts, companies, individuals or between personal and business entries.</p>
+            </div>
+            <div class="col-md-6 faq-item">
+                <h5><strong>Do I have to commit to a long-term contract?</strong></h5>
+                <p>No. There is no contract when you use Pulse, other than agreeing to our Terms of Service.</p>
+            </div>
+            <div class="col-md-6 faq-item">
+                <h5><strong>Will I be able to cancel my account if I don’t use Pulse?</strong></h5>
+                <p>Yes – you can cancel your account at any time. To cancel your account, go to your billing page and click on “Please cancel my account” at the bottom of the page. The account owner is the only one who can cancel an account. An email request to delete an account is not considered cancellation.</p>
+            </div>
+            <div class="col-md-6 faq-item">
+                <h5><strong>What types of payments do you accept?</strong></h5>
+                <p>We accept payments made online using Visa, Mastercard, Discover, and American Express.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="text-light py-5" style="background-color: var(--pulse-color-dark);">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <img src="pulse_logo_dark_bg.png" alt="Pulse Logo" height="100"> <br>
+                <a href="#" class="btn-custom">Sign Up for a Free 30-Day Trial</a>
+            </div>
+            <div>
+                <h5>Product</h5>
+                <p class="text-success fw-bold">Features</p>
+                <p class="text-success fw-bold">Pricing</p>
+                <p class="text-success fw-bold">Sign Up</p>
+            </div>
+            <div>
+                <h5>Company</h5>
+                <p class="text-success fw-bold">Customer Stories</p>
+                <p class="text-success fw-bold">About</p>
+                <p class="text-success fw-bold">Contact</p>
+            </div>
+            <div>
+                <h5>Resources</h5>
+                <p class="text-success fw-bold">Support</p>
+                <p class="text-success fw-bold">Blog</p>
+                
+            </div>
+        </div>
+        <div class="container d-flex justify-content-between align-items-center mt-4 flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="btn-contact">CONTACT US</a>
+            </div>
+            <div class="text-secondary text-start">
+                <p class="m-0">
+                    &copy; 2019 Pulseapp.com Inc. All rights reserved | 
+                    <a href="#" class="text-secondary">Terms of Use</a> | 
+                    <a href="#" class="text-secondary">Privacy Policy</a> | 
+                    <a href="#" class="text-secondary">EU Privacy</a>
+                </p>
+                <small>
+                    Pulse is made by 
+                    <a href="#" class="text-secondary">Simple Focus</a>. We also make 
+                    <a href="#" class="text-secondary">Ballpark</a>, 
+                    <a href="#" class="text-secondary">Sifter</a>, and 
+                    <a href="#" class="text-secondary">Curated</a>.
+                </small>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

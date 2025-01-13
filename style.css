@@ -1,120 +1,107 @@
+:root {
+    --pulse-color-page-background: #eafaf1;
+    --pulse-color-card-background: #d6dae5;
+    --pulse-color-faq-background: #fcfcfc;
+    --pulse-color-headings: #00ad6a;
+    --pulse-color-buttons: #1fe374;
+    --pulse-color-dark: #080c16;
+}
+
 body {
-    background-color: rgb(191, 214, 244);
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    color: var(--pulse-color-dark);
+    background: var(--pulse-color-page-background);
 }
 
-.title {
+.section-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.faq-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 50px;
+}
+
+.custom-margin {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.faq-S{
+background-color: white;
+
+}
+.btn-custom {
+    display: inline-block;
+    background-color: #1fe374;  /* Grüne Hintergrundfarbe */
+    color: #000;  /* Schwarzer Text */
+    padding: 15px 40px;  /* 15px oben/unten, 40px links/rechts */
     text-align: center;
-    color: rgb(12, 41, 187);
-}
-
-p {
-    line-height: 1.6;
-}
-.favorites {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.favorites .movies, .favorites .series {
-    width: 45%;
-}
-
-.favorites h3 {
-    text-align: center;
-}
-
-.favorites ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.favorites li {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.zit{
-  margin-bottom: 150px;
-}
-/* Footer und Wellen-Effekte */
-.footer {
-    position: relative;
-    width: 100%;
-    background: #3586ff;
-    padding: 20px 50px;
-    text-align: center;
-    color: #fff;
-}
-
-
-
-.wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("https://i.ibb.co/wQZVxxk/wave.png");
-    background-size: 1000px 100px;
-  }
-  .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWaves 4s linear infinite;
-  }
-
-  .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animate 4s linear infinite !important;
-  }
-  .wave#wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateWaves 3s linear infinite;
-  }
-  .wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animate 3s linear infinite;
-  }
-
-@keyframes animateWaves {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1000px); }
-}
-
-/* Social Icons und Menü Links */
-.social-icon,
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-.social-icon__link, .menu__link {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0 10px;
     text-decoration: none;
-    transition: 0.5s;
-    opacity: 0.75;
+    font-weight: bold;
+    border-radius: 8px;  /* Abgerundete Ecken */
+    transition: background-color 0.3s ease;
 }
 
-.social-icon__item,
-.menu__item {
-  list-style: none;
+.btn-custom:hover {
+    background-color: #17c865;  /* Dunkleres Grün beim Hover */
 }
-  
-  
+.footer-custom {
+    background-color: #080c16;
+    padding: 60px 0;
+}
+
+.btn-custom {
+    display: inline-block;
+    background-color: #1fe374;
+    color: #000;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #17c865;
+}
+
+.btn-contact {
+    display: inline-block;
+    color: #1fe374;
+    border: 2px solid #1fe374;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #1fe374;
+    color: #000;
+}
+
+.footer-custom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-custom a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.text-secondary a {
+    text-decoration: none;
+    color: #9c9c9c;
+}
+
+.text-secondary a:hover {
+    color: #1fe374;
+}
+
