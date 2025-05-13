@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supermarket Receipt Kata</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 40px;
+      background-color: #f7f9fc;
+    }
+    .product-entry {
+      margin-bottom: 10px;
+    }
+    #receipt {
+      white-space: pre-wrap;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .icon-button::before {
+      margin-right: 5px;
+    }
+    .btn-success::before { content: "🧾"; }
+    .btn-danger::before { content: "🗑️"; }
+    .btn-primary::before { content: "➕"; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">Supermarket Receipt 🛒</h1>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="product" class="form-label">Product</label>
+        <select id="product" class="form-select">
+          <option value="rice">🍚 Rice (€2.49 per bag)</option>
+          <option value="apples">🍎 Apples (€1.99/kg)</option>
+          <option value="milk">🥛 Milk (€1.20)</option>
+          <option value="toothbrush">🪥 Toothbrush (€0.99)</option>
+          <option value="toothpaste">🧴 Toothpaste (€1.79)</option>
+          <option value="tomatoes">🍅 Cherry Tomatoes (€0.69/box)</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" id="quantity" class="form-control" min="1" value="1">
+      </div>
+      <div class="col-md-3 d-flex align-items-end">
+        <button class="btn btn-primary w-100 icon-button" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <h3>🛍️ Shopping Cart</h3>
+    <ul id="cart" class="list-group mb-4"></ul>
+
+    <div class="mb-3">
+      <button class="btn btn-success me-2 icon-button" onclick="generateReceipt()">Generate Receipt</button>
+      <button class="btn btn-danger icon-button" onclick="clearReceipt()">Clear Receipt</button>
+    </div>
+
+    <h3>📄 Receipt</h3>
+    <div id="receipt"></div>
+  </div>
+
+  <script>
+    const catalog = {
+      rice: { price: 2.49, name: "Rice", discount: qty => qty * 2.49 * 0.9 },
+      apples: { price: 1.99, name: "Apples", discount: qty => qty * 1.99 * 0.8 },
+      milk: { price: 1.20, name: "Milk" },
+      toothbrush: { price: 0.99, name: "Toothbrush", discount: qty => ((qty - Math.floor(qty / 3)) * 0.99) },
+      toothpaste: { price: 1.79, name: "Toothpaste", discount: qty => {
+        let sets = Math.floor(qty / 5);
+        let remainder = qty % 5;
+        return sets * 7.49 + remainder * 1.79;
+      }},
+      tomatoes: { price: 0.69, name: "Cherry Tomatoes", discount: qty => {
+        let sets = Math.floor(qty / 2);
+        let remainder = qty % 2;
+        return sets * 0.99 + remainder * 0.69;
+      }}
+    };
+
+    const cart = [];
+
+    function addToCart() {
+      const product = document.getElementById("product").value;
+      const quantity = parseInt(document.getElementById("quantity").value);
+      const item = catalog[product];
+      cart.push({ name: item.name, price: item.price, quantity, discountFunc: item.discount });
+
+      const cartList = document.getElementById("cart");
+      const li = document.createElement("li");
+      li.className = "list-group-item";
+      li.textContent = `${item.name} x${quantity}`;
+      cartList.appendChild(li);
+    }
+
+    function generateReceipt() {
+      let receipt = "--- Supermarket Receipt ---\n\n";
+      let total = 0;
+      cart.forEach(item => {
+        const lineTotal = item.discountFunc ? item.discountFunc(item.quantity) : item.price * item.quantity;
+        const original = item.price * item.quantity;
+        const discount = original - lineTotal;
+        receipt += `${item.name} x${item.quantity} = €${lineTotal.toFixed(2)}`;
+        if (discount > 0.01) receipt += ` (saved €${discount.toFixed(2)})`;
+        receipt += "\n";
+        total += lineTotal;
+      });
+      receipt += `\nTOTAL: €${total.toFixed(2)}`;
+      document.getElementById("receipt").textContent = receipt;
+    }
+
+    function clearReceipt() {
+      document.getElementById("receipt").textContent = "";
+      document.getElementById("cart").innerHTML = "";
+      cart.length = 0;
+    }
+  </script>
+</body>
+</html>
