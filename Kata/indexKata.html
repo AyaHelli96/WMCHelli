@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarkt-Kassensystem</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome für Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Eigene CSS-Datei -->
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shopping-cart"></i> HelliMart
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-tags"></i> Angebote</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="warenkorb.html"><i class="fas fa-shopping-basket"></i> Warenkorb</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero-Bereich mit Banner -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-content">
+                        <h1>Willkommen bei HelliMart</h1>
+                        <p>Ihr Supermarkt für frische und qualitativ hochwertige Produkte zu fairen Preisen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Kategorien-Navigation -->
+        <div class="category-nav">
+            <ul class="nav nav-pills mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#fleisch">Fleisch & Fisch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gemüse">Obst & Gemüse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#milch">Milchprodukte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#backwaren">Backwaren</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#getränke">Getränke</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Fleisch & Fisch Abteilung -->
+        <section id="fleisch">
+            <h2 class="section-title">Fleisch & Fisch</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Hühner.jpg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-danger position-absolute top-0 end-0 m-2">Beliebt</span>
+                        </div>
+                        
+                         <div class="product-body">
+                            <h5 class="product-title">Hühnerbrust</h5>
+                            <p class="mb-1">500g, Freiland</p>
+                            <p class="product-price">€4.99</p>
+                            <input type="number" id="quantity-chicken-breast" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="chicken-breast" 
+                                    data-name="Hühnerbrust" 
+                                    data-price="4.99" 
+                                    data-department="Fleisch & Fisch">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                         </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                         <img src="fotosKata/rind.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Bio</span>
+                        </div>
+                        
+                        <div class="product-body">
+                            <h5 class="product-title">Rinderhackfleisch</h5>
+                            <p class="mb-1">400g, Bio</p>
+                            <p class="product-price">€5.49</p>
+                            <input type="number" id="quantity-beef-mince" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="beef-mince" 
+                                    data-name="Rinderhackfleisch" 
+                                    data-price="5.49" 
+                                    data-department="Fleisch & Fisch">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                         <div class="product-image">
+                         <img src="fotosKata/lachs.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Frisch</span>
+                        </div>
+                       
+                        <div class="product-body">
+                            <h5 class="product-title">Lachsfilet</h5>
+                            <p class="mb-1">300g, Frisch</p>
+                            <p class="product-price">€7.99</p>
+                            <input type="number" id="quantity-salmon-fillet" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="salmon-fillet" 
+                                    data-name="Lachsfilet" 
+                                    data-price="7.99" 
+                                    data-department="Fleisch & Fisch">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Obst & Gemüse Abteilung -->
+        <section id="gemüse" class="mt-5">
+            <h2 class="section-title">Obst & Gemüse</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/apfel.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Bio</span>
+                        </div>
+                        
+                        <div class="product-body">
+                            <h5 class="product-title">Bio Äpfel</h5>
+                            <p class="mb-1">1kg, Gala</p>
+                            <p class="product-price">€2.99</p>
+                            <input type="number" id="quantity-bio-apples" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="bio-apples" 
+                                    data-name="Bio Äpfel" 
+                                    data-price="2.99" 
+                                    data-department="Obst & Gemüse">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/karotten.jpg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Regional</span>
+                        </div>
+                        
+                        <div class="product-body">
+                            <h5 class="product-title">Karotten</h5>
+                            <p class="mb-1">500g, Regional</p>
+                            <p class="product-price">€1.49</p>
+                            <input type="number" id="quantity-carrots" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="carrots" 
+                                    data-name="Karotten" 
+                                    data-price="1.49" 
+                                    data-department="Obst & Gemüse">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Tomaten.webp" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                        </div>
+                        
+                        <div class="product-body">
+                            <h5 class="product-title">Tomaten</h5>
+                            <p class="mb-1">500g, Cocktail</p>
+                            <p class="product-price">€2.29</p>
+                            <input type="number" id="quantity-tomatoes" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="tomatoes" 
+                                    data-name="Tomaten" 
+                                    data-price="2.29" 
+                                    data-department="Obst & Gemüse">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milchprodukte Abteilung -->
+        <section id="milch" class="mt-5">
+            <h2 class="section-title">Milchprodukte</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/milch.jpg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Bio</span>
+                        </div>
+                        
+                        <div class="product-body">
+                            <h5 class="product-title">Bio Vollmilch</h5>
+                            <p class="mb-1">1L, 3.5% Fett</p>
+                            <p class="product-price">€1.29</p>
+                            <input type="number" id="quantity-whole-milk" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="whole-milk" 
+                                    data-name="Bio Vollmilch" 
+                                    data-price="1.29" 
+                                    data-department="Milchprodukte">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Käse.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Käse-Aufschnitt</h5>
+                            <p class="mb-1">200g, Gouda</p>
+                            <p class="product-price">€2.49</p>
+                            <input type="number" id="quantity-cheese-slices" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="cheese-slices" 
+                                    data-name="Käse-Aufschnitt" 
+                                    data-price="2.49" 
+                                    data-department="Milchprodukte">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Joghurt.png" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-primary position-absolute top-0 end-0 m-2">Protein</span>
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Griechischer Joghurt</h5>
+                            <p class="mb-1">500g, 10% Fett</p>
+                            <p class="product-price">€1.99</p>
+                            <input type="number" id="quantity-greek-yogurt" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="greek-yogurt" 
+                                    data-name="Griechischer Joghurt" 
+                                    data-price="1.99" 
+                                    data-department="Milchprodukte">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backwaren Abteilung -->
+        <section id="backwaren" class="mt-5">
+            <h2 class="section-title">Backwaren</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Bauernhof.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Frisch</span>
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Bauernbrot</h5>
+                            <p class="mb-1">500g, Frisch gebacken</p>
+                            <p class="product-price">€2.29</p>
+                            <input type="number" id="quantity-bread" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="bread" 
+                                    data-name="Bauernbrot" 
+                                    data-price="2.29" 
+                                    data-department="Backwaren">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/kross.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Croissants</h5>
+                            <p class="mb-1">4 Stück, Butter</p>
+                            <p class="product-price">€3.49</p>
+                            <input type="number" id="quantity-croissants" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="croissants" 
+                                    data-name="Croissants" 
+                                    data-price="3.49" 
+                                    data-department="Backwaren">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/vkbrötchen.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Vollkorn</span>
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Vollkornbrötchen</h5>
+                            <p class="mb-1">6 Stück, Frisch</p>
+                            <p class="product-price">€2.99</p>
+                            <input type="number" id="quantity-wholegrain-rolls" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="wholegrain-rolls" 
+                                    data-name="Vollkornbrötchen" 
+                                    data-price="2.99" 
+                                    data-department="Backwaren">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getränke Abteilung -->
+        <section id="getränke" class="mt-5">
+            <h2 class="section-title">Getränke</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Minralwasser.png" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Mineralwasser</h5>
+                            <p class="mb-1">6x1L, Medium</p>
+                            <p class="product-price">€3.49</p>
+                            <input type="number" id="quantity-mineral-water" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="mineral-water" 
+                                    data-name="Mineralwasser" 
+                                    data-price="3.49" 
+                                    data-department="Getränke">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/orangensaft.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Bio</span>
+                        </div>
+                        <div class="product-body">
+                            <h5 class="product-title">Bio Orangensaft</h5>
+                            <p class="mb-1">1L, Direktsaft</p>
+                            <p class="product-price">€2.79</p>
+                            <input type="number" id="quantity-orange-juice" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="orange-juice" 
+                                    data-name="Bio Orangensaft" 
+                                    data-price="2.79" 
+                                    data-department="Getränke">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card position-relative">
+                        <div class="product-image">
+                          <img src="fotosKata/Gröbi.jpeg" alt="Hühnerbrust" class="img-fluid">
+                        </div>
+                        <div class="product-image" style="background-image: url('/api/placeholder/300/200');">
+                            <span class="badge bg-dark position-absolute top-0 end-0 m-2">Lokal</span>
+                        </div>
+                        <div class="product-body">
+                            
+                            <h5 class="product-title">Gröbi</h5>
+                            <p class="mb-1">6x0.5L, Hell</p>
+                            <p class="product-price">€5.99</p>
+                            <input type="number" id="quantity-vienna-beer" class="form-control mb-2" value="1" min="1">
+                            <button class="btn btn-sm btn-primary w-100 add-to-cart" 
+                                    data-id="vienna-beer" 
+                                    data-name="Gröbi" 
+                                    data-price="5.99" 
+                                    data-department="Getränke">
+                                <i class="fas fa-plus"></i> Hinzufügen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-shopping-cart"></i> HelliMart</h5>
+                    <p>Ihr Supermarkt für frische und qualitativ hochwertige Produkte zu fairen Preisen.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-map-marker-alt"></i> Standorte</h5>
+                    <ul class="list-unstyled">
+                        <li>Wien-Mitte</li>
+                        <li>Graz</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-envelope"></i> Kontakt</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> 0046 13456789</li>
+                        <li><i class="fas fa-envelope"></i> info@HelliMart.at</li>
+                        <li><i class="fas fa-clock"></i> Mo-Sa: 8:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 HelliMart. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
