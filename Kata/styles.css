@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #198754; /* Grün */
+    --secondary-color: #dc3545; /* Rot */
+    --dark-color: #212529; /* Schwarz */
+    --light-color: #ffffff; /* Weiß */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 300px;
+}
+
+.navbar {
+    background: linear-gradient(to right, var(--dark-color), var(--primary-color));
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--light-color) !important;
+}
+
+.nav-link {
+    color: var(--light-color) !important;
+}
+
+.navbar-toggler-icon {
+    background-color: var(--light-color);
+}
+
+footer {
+    background: linear-gradient(to right, var(--primary-color), var(--dark-color));
+    color: var(--light-color);
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.product-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-body {
+    padding: 15px;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.cart-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    border-top: 2px solid var(--dark-color);
+    padding-top: 10px;
+}
+
+.btn-checkout {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-checkout:hover {
+    background-color: #0f5132;
+    color: white;
+}
+
+.btn-clear {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+}
+
+.btn-clear:hover {
+    background-color: #bb2d3b;
+    color: white;
+}
